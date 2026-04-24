@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>shoaibcreates67 - Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h2>shoaibcreates67</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="glow"></div>
+
+  <!-- IMAGE -->
+  <img class="profile" src="images/profile.jpg" alt="profile" />
+
+  <h1>Muhammad Shoaib</h1>
+  <div class="typing" id="typing"></div>
+
+  <a class="btn" href="#contact">Contact Me</a>
+</section>
+
+<section id="about">
+  <h2 class="title">About Me</h2>
+<p class="about-text">
+I am Muhammad Shoaib, a beginner Frontend Developer who is passionate about learning web development.
+Currently, I am improving my skills in HTML, CSS and JavaScript by building small practice projects.
+
+I enjoy creating simple and clean user interfaces and I am focused on becoming a professional web developer step by step.
+My goal is to start freelancing and build real-world projects for clients in the future.
+</p>
+</section>
+
+<section id="services">
+  <h2 class="title">What I Can Do</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Website Design</h3>
+    <p>I can design simple and clean static websites using HTML & CSS.</p>
+  </div>
+
+  <div class="card">
+    <h3>Landing Pages</h3>
+    <p>I build basic responsive landing pages for practice and small ideas.</p>
+  </div>
+
+  <div class="card">
+    <h3>UI Practice Projects</h3>
+    <p>I create UI designs while learning modern web development concepts.</p>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+  <h2 class="title">Projects</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3>Restaurant Website</h3>
+    <p>A responsive food website built using HTML & CSS with clean layout design.</p>
+  </div>
+
+  <div class="card">
+    <h3>E-Commerce UI (Practice)</h3>
+    <p>A simple product page design created while learning frontend development.</p>
+  </div>
+
+  <div class="card">
+    <h3>Personal Portfolio</h3>
+    <p>This portfolio itself is a practice project to improve my UI and structure skills.</p>
+  </div>
+
+</div>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact</h2>
+  <div class="contact-box">
+    <p>Email: helloshoaib01@gmail.com</p>
+
+    <a class="btn" href="https://wa.me/923170162345" target="_blank">
+      WhatsApp Me
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 shoaibcreates67
+</footer>
+
+<script>
+const text = "Frontend Developer | UI Designer | Learning Modern Web Development | Passionate about Clean Design";
+let i=0;
+function type(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(type,60);
+  }
+}
+type();
+</script>
+
+</body>
+</html>

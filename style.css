@@ -1,0 +1,174 @@
+:root{
+  --accent:#38bdf8;
+  --bg:#050814;
+  --card:rgba(255,255,255,0.05);
+  --border:rgba(255,255,255,0.08);
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:18px 60px;
+  background:#0b1220;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+nav a{
+  color:var(--muted);
+  margin-left:15px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  position:relative;
+  animation:fadeUp 1s ease;
+}
+
+/* PROFILE IMAGE */
+.profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+
+  object-fit: contain;
+  background: #0b1220;
+
+  border: 3px solid #38bdf8;
+}
+/* TEXT */
+h1{
+  color:var(--accent);
+  font-size:42px;
+  animation:fadeUp 1.2s ease;
+}
+
+.typing{
+  color:var(--muted);
+  margin-top:10px;
+  animation:fadeUp 1.4s ease;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 25px;
+  background:var(--accent);
+  color:#000;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+  animation:fadeUp 1.6s ease;
+}
+
+.btn:hover{
+  transform:scale(1.08);
+  background:#0ea5e9;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 60px;
+  animation:fadeUp 1s ease;
+}
+
+.title{
+  text-align:center;
+  color:var(--accent);
+  margin-bottom:30px;
+}
+
+.about-text{
+  text-align:center;
+  color:var(--muted);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  border-color:var(--accent);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card h3{
+  color:var(--accent);
+}
+
+/* CONTACT */
+.contact-box{
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes zoomIn{
+  from{opacity:0; transform:scale(0.8);}
+  to{opacity:1; transform:scale(1);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+  }
+
+  section{
+    padding:50px 20px;
+  }
+
+  h1{
+    font-size:30px;
+  }
+}
